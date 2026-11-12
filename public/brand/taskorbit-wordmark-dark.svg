@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-label="TaskOrbit">
+  <defs>
+    <linearGradient id="to-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6658F5"/>
+      <stop offset="1" stop-color="#16C8E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#to-bg)"/>
+  <ellipse cx="32" cy="32" rx="21" ry="9" fill="none" stroke="#FFFFFF" stroke-width="3.5" transform="rotate(-24 32 32)" opacity="0.95"/>
+  <circle cx="50.5" cy="21.5" r="3.4" fill="#FFFFFF"/>
+  <path d="M22 33.5 L29 40.5 L43 25" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="41" font-family="Space Grotesk, 'Inter', sans-serif" font-size="30" font-weight="700" fill="#F4F7FF">TaskOrbit</text>
+</svg>

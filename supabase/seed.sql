@@ -1,0 +1,84 @@
+-- TaskOrbit — dev-only seed examples (Part 1).
+--
+-- This file intentionally does NOTHING when run: every statement below is
+-- commented out. There are no passwords and no demo login here.
+--
+-- How to seed by hand (local / disposable Supabase only, never production):
+--   1. Create the users in Supabase Auth first (sign up through the app or
+--      the Supabase dashboard). Their profiles are created automatically by
+--      the trigger on auth.users.
+--   2. Copy each user's id from `select id, email from auth.users;` and
+--      paste it into the UUID placeholders below.
+--   3. Uncomment one block at a time and run it as the postgres /
+--      service_role user (RLS is bypassed for the table owner).
+--   4. Prefer the app's own RPCs where possible: create a workspace with
+--      `select public.create_workspace('My Workspace');` as the logged-in
+--      manager instead of inserting into workspaces directly, and invite
+--      developers from the Team page instead of inserting invitation rows.
+
+-- -- Example: workspace owned by the first user (replace the UUID).
+-- insert into public.workspaces (id, name, slug, timezone, created_by)
+-- values (
+--   'a0000000-0000-4000-8000-000000000001',
+--   'Example Workspace',
+--   'example-workspace-abc123',
+--   'Asia/Dhaka',
+--   '11111111-1111-4111-8111-111111111111'  -- manager's auth.users id
+-- );
+--
+-- insert into public.workspace_members (workspace_id, user_id, role)
+-- values (
+--   'a0000000-0000-4000-8000-000000000001',
+--   '11111111-1111-4111-8111-111111111111',
+--   'manager'
+-- );
+--
+-- -- Example: developer member of the same workspace.
+-- insert into public.workspace_members (workspace_id, user_id, role)
+-- values (
+--   'a0000000-0000-4000-8000-000000000001',
+--   '22222222-2222-4222-8222-222222222222',  -- developer's auth.users id
+--   'developer'
+-- );
+--
+-- -- Example: project in that workspace.
+-- insert into public.projects (id, workspace_id, name, description, status, priority, start_date, due_date, created_by)
+-- values (
+--   'b0000000-0000-4000-8000-000000000001',
+--   'a0000000-0000-4000-8000-000000000001',
+--   'Example Project',
+--   'Seeded example project.',
+--   'active',
+--   'medium',
+--   current_date,
+--   current_date + interval '14 days',
+--   '11111111-1111-4111-8111-111111111111'
+-- );
+--
+-- -- Example: task assigned to the developer (a notification row and an
+-- -- activity row are created automatically by the triggers in 0001).
+-- insert into public.tasks (id, project_id, title, description, assigned_to, created_by, status, priority, due_date)
+-- values (
+--   'c0000000-0000-4000-8000-000000000001',
+--   'b0000000-0000-4000-8000-000000000001',
+--   'Example task',
+--   'Seeded example task.',
+--   '22222222-2222-4222-8222-222222222222',
+--   '11111111-1111-4111-8111-111111111111',
+--   'todo',
+--   'medium',
+--   current_date + interval '7 days'
+-- );
+--
+-- -- Example: invitation row (create a real one from the app instead: the
+-- -- app hashes the token with public.sha256_hex and never stores it raw).
+-- -- insert into public.workspace_invitations
+-- --   (workspace_id, invited_email, intended_role, token_hash, expires_at, created_by)
+-- -- values (
+-- --   'a0000000-0000-4000-8000-000000000001',
+-- --   'developer@example.com',
+-- --   'developer',
+-- --   public.sha256_hex('paste-a-random-token-here'),
+-- --   now() + interval '7 days',
+-- --   '11111111-1111-4111-8111-111111111111'
+-- -- );

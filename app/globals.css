@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TaskOrbit brand tokens (Part 3 §1). Light is the default; .dark is
+   wired by the theme track (next-themes) — these variables make both
+   themes work the moment the provider is mounted. */
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-bangla: 'Hind Siliguri', sans-serif;
+
+  --brand-indigo: #6658f5;
+  --brand-cyan: #16c8e8;
+  --brand-violet: #a36bfa;
+  --brand-coral: #ff7d70;
+  --brand-mint: #2dd4bf;
+
+  --background: #f7f9fe;
+  --surface: #ffffff;
+  --surface-2: #eef2fb;
+  --ink: #182039;
+  /* Muted text: #64748b (was #7c87a0) — the old value measured 3.42:1
+     on --background / 3.60:1 on --surface, below WCAG AA 4.5:1 for
+     normal text; this one measures 4.52:1 / 4.76:1. Dark muted #9aa7c4
+     measures 7.97:1 / 7.20:1 (passes). See lib/theme/contrast.ts. */
+  --muted: #64748b;
+  --border: rgba(24, 32, 57, 0.1);
+  --ring: #6658f5;
+
+  --success: #16a34a;
+  --success-bg: #dcfce7;
+  --warning: #d97706;
+  --warning-bg: #fef3c7;
+  --danger: #dc2626;
+  --danger-bg: #fee2e2;
+
+  /* Role accents */
+  --role-accent: var(--brand-indigo);
+  --role-accent-2: var(--brand-cyan);
+  --role-accent-soft: rgba(102, 88, 245, 0.12);
+}
+
+.dark {
+  --background: #090e1c;
+  --surface: #121a2b;
+  --surface-2: #1a2540;
+  --ink: #f4f7ff;
+  --muted: #9aa7c4;
+  --border: rgba(244, 247, 255, 0.12);
+  --ring: #8b7ff7;
+
+  --success: #4ade80;
+  --success-bg: rgba(74, 222, 128, 0.14);
+  --warning: #fbbf24;
+  --warning-bg: rgba(251, 191, 36, 0.14);
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.14);
+
+  --role-accent-soft: rgba(139, 127, 247, 0.18);
+}
+
+/* Role identity: the dashboard layout sets data-role="manager|developer". */
+[data-role='manager'] {
+  --role-accent: #6658f5;
+  --role-accent-2: #16c8e8;
+  --role-accent-soft: rgba(102, 88, 245, 0.12);
+}
+[data-role='developer'] {
+  --role-accent: #2dd4bf;
+  --role-accent-2: #ff7d70;
+  --role-accent-soft: rgba(45, 212, 191, 0.14);
+}
+.dark [data-role='manager'] {
+  --role-accent: #8b7ff7;
+  --role-accent-2: #38d6f2;
+}
+.dark [data-role='developer'] {
+  --role-accent: #2dd4bf;
+  --role-accent-2: #ff9a8f;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+/* Bangla: Hind Siliguri (loaded in the root layout) takes over from
+   Inter / Space Grotesk when the page language is Bangla — neither of
+   those has Bengali glyphs, so without this Bangla text would fall back
+   to an arbitrary system font. */
+html[lang='bn'] body,
+html[lang='bn'] h1,
+html[lang='bn'] h2,
+html[lang='bn'] h3,
+html[lang='bn'] h4 {
+  font-family: var(--font-bangla);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+/* Visible focus everywhere (spec §10). */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animated gradient for the hero headline accent. */
+.gradient-text {
+  background: linear-gradient(90deg, #6658f5, #16c8e8, #a36bfa, #6658f5);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-slide 8s linear infinite;
+}
+@keyframes gradient-slide {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* Floating / orbiting motion (landing hero + mascot). Transform + opacity only. */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes float-y-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1.5deg);
+  }
+}
+.animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+.animate-float-soft {
+  animation: float-y-soft 6s ease-in-out infinite;
+}
+.animate-orbit-spin {
+  animation: orbit-spin 24s linear infinite;
+}
+.animate-bob {
+  animation: bob 4s ease-in-out infinite;
+}
+
+/* Dashboard card entrance: short stagger, transform + opacity only. */
+@keyframes dash-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dash-enter {
+  animation: dash-enter 0.45s ease-out both;
+}
+
+/* Hover lift on cards and buttons. */
+.hover-lift {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 24px -12px rgba(24, 32, 57, 0.35),
+    0 2px 6px -2px rgba(24, 32, 57, 0.12);
+}
+
+/* Toast entrance. */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.toast-enter {
+  animation: toast-in 0.25s ease-out both;
+}
+
+/* Skeleton shimmer. */
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 50%, var(--surface-2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: 0.5rem;
+}
+
+/* Liquid progress waves (motion is transform-only; the wave paths slide). */
+@keyframes wave-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* One full wave period (120 user units) so the loop is seamless. */
+    transform: translateX(-120px);
+  }
+}
+.liquid-wave {
+  animation: wave-slide 3.2s linear infinite;
+}
+.liquid-wave-slow {
+  animation: wave-slide 5s linear infinite;
+}
+
+/* Mascot states. */
+@keyframes mascot-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+@keyframes mascot-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-14px) scale(1.04);
+  }
+  60% {
+    transform: translateY(2px) scale(0.98);
+  }
+}
+.mascot-error {
+  animation: mascot-shake 0.5s ease-in-out;
+}
+.mascot-success {
+  animation: mascot-bounce 0.7s ease-in-out;
+}
+
+/* Scroll reveal initial state — JS (GSAP) adds .revealed; without JS the
+   content stays visible because the class is only added by the component. */
+.reveal-hidden {
+  opacity: 0;
+}
+
+/* Reduced motion: disable non-essential motion, waves become static fills,
+   loaders become simple static indicators. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gradient-text {
+    animation: none;
+  }
+  .liquid-wave,
+  .liquid-wave-slow {
+    animation: none;
+    transform: translateX(-25%);
+  }
+  .reveal-hidden {
+    opacity: 1;
+  }
+}
