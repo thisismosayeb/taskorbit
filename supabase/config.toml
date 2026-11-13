@@ -1,0 +1,15 @@
+# TaskOrbit — local Supabase config (CI + local dev).
+# Local-only defaults; no secrets. Lets `supabase start` run without a
+# prior `supabase init`. Ports are pinned because CI reads them from
+# `supabase status` (API 54321, direct Postgres 54322, Studio 54323).
+project_id = "taskorbit"
+
+[api]
+port = 54321
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+port = 54323
