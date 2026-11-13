@@ -1,0 +1,402 @@
+{
+  "base": "https://taskorbit-gamma.vercel.app",
+  "generated": "2026-11-12T23:29:15.654Z",
+  "shots": [
+    {
+      "file": "landing-320-light.png",
+      "width": 320,
+      "theme": "light",
+      "bytes": 64505
+    },
+    {
+      "file": "landing-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 74521
+    },
+    {
+      "file": "landing-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 132795
+    },
+    {
+      "file": "landing-1024-light.png",
+      "width": 1024,
+      "theme": "light",
+      "bytes": 138560
+    },
+    {
+      "file": "landing-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 142547
+    },
+    {
+      "file": "landing-1920-light.png",
+      "width": 1920,
+      "theme": "light",
+      "bytes": 143969
+    },
+    {
+      "file": "login-320-light.png",
+      "width": 320,
+      "theme": "light",
+      "bytes": 25576
+    },
+    {
+      "file": "login-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 26145
+    },
+    {
+      "file": "login-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 140115
+    },
+    {
+      "file": "login-1024-light.png",
+      "width": 1024,
+      "theme": "light",
+      "bytes": 145683
+    },
+    {
+      "file": "login-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 152386
+    },
+    {
+      "file": "login-1920-light.png",
+      "width": 1920,
+      "theme": "light",
+      "bytes": 153324
+    },
+    {
+      "file": "landing-320-dark.png",
+      "width": 320,
+      "theme": "dark",
+      "bytes": 64899
+    },
+    {
+      "file": "landing-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 73738
+    },
+    {
+      "file": "landing-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 127877
+    },
+    {
+      "file": "landing-1024-dark.png",
+      "width": 1024,
+      "theme": "dark",
+      "bytes": 133499
+    },
+    {
+      "file": "landing-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 137637
+    },
+    {
+      "file": "landing-1920-dark.png",
+      "width": 1920,
+      "theme": "dark",
+      "bytes": 138253
+    },
+    {
+      "file": "login-320-dark.png",
+      "width": 320,
+      "theme": "dark",
+      "bytes": 26206
+    },
+    {
+      "file": "login-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 26726
+    },
+    {
+      "file": "login-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 140944
+    },
+    {
+      "file": "login-1024-dark.png",
+      "width": 1024,
+      "theme": "dark",
+      "bytes": 147519
+    },
+    {
+      "file": "login-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 153414
+    },
+    {
+      "file": "login-1920-dark.png",
+      "width": 1920,
+      "theme": "dark",
+      "bytes": 154179
+    },
+    {
+      "file": "dashboard-manager-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 49036
+    },
+    {
+      "file": "dashboard-manager-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 83092
+    },
+    {
+      "file": "dashboard-manager-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 143243
+    },
+    {
+      "file": "dashboard-manager-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 50114
+    },
+    {
+      "file": "dashboard-manager-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 84657
+    },
+    {
+      "file": "dashboard-manager-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 145158
+    },
+    {
+      "file": "dashboard-developer-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 43192
+    },
+    {
+      "file": "dashboard-developer-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 54348
+    },
+    {
+      "file": "dashboard-developer-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 108668
+    },
+    {
+      "file": "dashboard-developer-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 45822
+    },
+    {
+      "file": "dashboard-developer-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 56757
+    },
+    {
+      "file": "dashboard-developer-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 112055
+    },
+    {
+      "file": "board-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 50151
+    },
+    {
+      "file": "board-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 87103
+    },
+    {
+      "file": "board-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 182207
+    },
+    {
+      "file": "board-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 52038
+    },
+    {
+      "file": "board-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 90257
+    },
+    {
+      "file": "board-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 185447
+    },
+    {
+      "file": "calendar-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 45967
+    },
+    {
+      "file": "calendar-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 75136
+    },
+    {
+      "file": "calendar-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 127048
+    },
+    {
+      "file": "calendar-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 48301
+    },
+    {
+      "file": "calendar-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 78548
+    },
+    {
+      "file": "calendar-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 130036
+    },
+    {
+      "file": "task-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 45179
+    },
+    {
+      "file": "task-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 57210
+    },
+    {
+      "file": "task-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 85812
+    },
+    {
+      "file": "task-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 46492
+    },
+    {
+      "file": "task-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 58829
+    },
+    {
+      "file": "task-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 87328
+    },
+    {
+      "file": "analytics-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 49975
+    },
+    {
+      "file": "analytics-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 63357
+    },
+    {
+      "file": "analytics-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 118791
+    },
+    {
+      "file": "analytics-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 51062
+    },
+    {
+      "file": "analytics-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 66302
+    },
+    {
+      "file": "analytics-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 121785
+    },
+    {
+      "file": "ai-375-light.png",
+      "width": 375,
+      "theme": "light",
+      "bytes": 38037
+    },
+    {
+      "file": "ai-768-light.png",
+      "width": 768,
+      "theme": "light",
+      "bytes": 44826
+    },
+    {
+      "file": "ai-1440-light.png",
+      "width": 1440,
+      "theme": "light",
+      "bytes": 65744
+    },
+    {
+      "file": "ai-375-dark.png",
+      "width": 375,
+      "theme": "dark",
+      "bytes": 38851
+    },
+    {
+      "file": "ai-768-dark.png",
+      "width": 768,
+      "theme": "dark",
+      "bytes": 45732
+    },
+    {
+      "file": "ai-1440-dark.png",
+      "width": 1440,
+      "theme": "dark",
+      "bytes": 66281
+    }
+  ]
+}
