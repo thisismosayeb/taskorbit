@@ -1,0 +1,194 @@
+{
+  "base": "https://taskorbit-gamma.vercel.app",
+  "generated": "2026-11-12T23:27:36.974Z",
+  "pages": [
+    {
+      "page": "landing",
+      "path": "/",
+      "violations": [],
+      "incomplete": 2,
+      "passes": 43
+    },
+    {
+      "page": "login",
+      "path": "/login",
+      "violations": [],
+      "incomplete": 1,
+      "passes": 39
+    },
+    {
+      "page": "dashboard-manager",
+      "path": "/dashboard",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        }
+      ],
+      "incomplete": 1,
+      "passes": 42
+    },
+    {
+      "page": "dashboard-developer",
+      "path": "/dashboard",
+      "violations": [],
+      "incomplete": 2,
+      "passes": 43
+    },
+    {
+      "page": "board",
+      "path": "/dashboard/board",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        },
+        {
+          "id": "nested-interactive",
+          "impact": "serious",
+          "nodes": 134,
+          "help": "Interactive controls must not be nested",
+          "targets": [
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(1)",
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(2)",
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(3)"
+          ]
+        }
+      ],
+      "incomplete": 2,
+      "passes": 43
+    },
+    {
+      "page": "calendar",
+      "path": "/dashboard/calendar",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        }
+      ],
+      "incomplete": 0,
+      "passes": 39
+    },
+    {
+      "page": "task",
+      "path": "/dashboard/tasks/4c2a6b37-937c-48f7-8c3e-148e6b3e0765",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        }
+      ],
+      "incomplete": 0,
+      "passes": 42
+    },
+    {
+      "page": "analytics",
+      "path": "/dashboard/analytics",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        }
+      ],
+      "incomplete": 1,
+      "passes": 51
+    },
+    {
+      "page": "ai",
+      "path": "/dashboard/ai",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".absolute"
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Elements must have their visible text as part of their accessible name",
+          "targets": [
+            "button[aria-label=\"Notifications, 12 unread\"]"
+          ]
+        }
+      ],
+      "incomplete": 0,
+      "passes": 39
+    }
+  ]
+}
