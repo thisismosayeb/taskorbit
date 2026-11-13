@@ -1,0 +1,81 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "generated": "2026-11-12T23:04:51.963Z",
+  "pages": [
+    {
+      "page": "landing",
+      "path": "/",
+      "violations": [],
+      "incomplete": 2,
+      "passes": 43
+    },
+    {
+      "page": "login",
+      "path": "/login",
+      "violations": [],
+      "incomplete": 1,
+      "passes": 39
+    },
+    {
+      "page": "dashboard-manager",
+      "path": "/dashboard",
+      "violations": [],
+      "incomplete": 1,
+      "passes": 42
+    },
+    {
+      "page": "dashboard-developer",
+      "path": "/dashboard",
+      "violations": [],
+      "incomplete": 2,
+      "passes": 44
+    },
+    {
+      "page": "board",
+      "path": "/dashboard/board",
+      "violations": [
+        {
+          "id": "nested-interactive",
+          "impact": "serious",
+          "nodes": 122,
+          "help": "Interactive controls must not be nested",
+          "targets": [
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(1)",
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(2)",
+            "section[aria-label=\"To do column\"] > .min-h-\\[140px\\].p-1.flex-col > .shadow-sm.hover\\:border-primary\\/40[role=\"button\"]:nth-child(3)"
+          ]
+        }
+      ],
+      "incomplete": 2,
+      "passes": 44
+    },
+    {
+      "page": "calendar",
+      "path": "/dashboard/calendar",
+      "violations": [],
+      "incomplete": 0,
+      "passes": 40
+    },
+    {
+      "page": "task",
+      "path": "/dashboard/tasks/4c2a6b37-937c-48f7-8c3e-148e6b3e0765",
+      "violations": [],
+      "incomplete": 0,
+      "passes": 42
+    },
+    {
+      "page": "analytics",
+      "path": "/dashboard/analytics",
+      "violations": [],
+      "incomplete": 1,
+      "passes": 51
+    },
+    {
+      "page": "ai",
+      "path": "/dashboard/ai",
+      "violations": [],
+      "incomplete": 0,
+      "passes": 39
+    }
+  ]
+}
